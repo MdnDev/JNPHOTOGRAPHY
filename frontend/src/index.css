@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+main{
+  min-height: 80vh;
+}
+
+/* Image grid styles */
+
+.photographs{
+  height: 280px;
+  width: 360px;
+}
+
+.img-grid{
+  height: 100%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 0.25fr 0.25fr 0.25fr;
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-wrap{
+  overflow: Hidden;
+  padding: 50% 0;
+  /*padding controls height, will always be perfectly square regardless of width */
+  position: relative;
+  opacity: 0.8;
+  
+  
+}
+
+.img-wrap img{
+  width: 18rem;
+  height: 200px;
+  max-width: 150%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* About Screen Styling */
+
+.about {
+  display: flex;
+}
+
+.profilePic {
+  height: 500px;
+  width: 500px;
+}
+
+
+/* Contact Screen Styling */
+
+.contactArtist {
+  display: flex;
+}
+
+@media only screen and (max-width: 1000px){
+  .contactArtist {
+    display: block;
+  }
+  .profilePic {
+    height: 100%;
+    width: 100%;
+   
+  }
+}
+
+
+/*Shop styling*/
+
+.shopContainer {
+  display: flex;
+  width: 100%;
+}
+
+
