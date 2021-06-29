@@ -26,9 +26,9 @@ const Portfolio = () => {
     
     return (
         <>
-            <h1 className='my-5 mx-5'>PORTFOLIO</h1>
+            <h1 className='my-5 mx-5'> PORTFOLIO</h1>
             {loading ? <Loader/> : error ? <Message variant="danger">{error}</Message> :
-            <Grid container className='ml-5' spacing={1} >
+            <Grid container spacing={1} >
             {photos.map((photo) => (
                 <Grid item key={photo._id}>
                     <Link to={`/photo/${photo._id}`}>
