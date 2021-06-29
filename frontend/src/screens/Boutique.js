@@ -64,7 +64,7 @@ const Boutique = () => {
                 
 
 
-                <Card style={{ height: '460px', width: '320px'}}>
+                {/*<Card style={{ height: '460px', width: '320px'}}>
                     <Card.Img className='mx-auto' variant="top" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.photographylife.com%2Fwp-content%2Fuploads%2F2015%2F12%2FVerm-Maier-book-7470-2.jpg&f=1&nofb=1" style={{ height: '250px', width: '300px'}}/>
                     <Card.Body>
                         <Card.Title>Livres</Card.Title>
@@ -75,9 +75,9 @@ const Boutique = () => {
                             <Button variant="dark">Visiter</Button>
                         </Link>
                     </Card.Body>
-                </Card>
+                </Card>*/}
                 </Grid>
-                </Container>
+        </Container>
             
     </Container>
     

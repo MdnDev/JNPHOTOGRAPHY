@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Image, Form, Button, Row, Col } from 'react-bootstrap';
+import Message from '../components/Message';
 
 
 const Contact = () => {
@@ -18,7 +19,7 @@ const Contact = () => {
 
             <section >
             <h5>Pour me contacter, veuillez remplir le formulaire ci-dessous:</h5>
-            <Form method="POST" data-netlify="true">
+            <Form action="https://formsubmit.co/address@gmail.com" method="POST">
                 <Row>
                     <Col>
                         <Form.Label className="my-2">Nom</Form.Label>
@@ -32,7 +33,7 @@ const Contact = () => {
                 </Row>
                 
                 <Form.Label className="my-2">Email</Form.Label>
-                <Form.Control type="email" placeholder="Email" name="Email"/>
+                <Form.Control type="email" placeholder="Email" name="Email" required/>
                 
                 <Form.Label className="my-2">Objet</Form.Label>
                 <Form.Control type="text" placeholder="Objet" name="Objet" />
@@ -49,7 +50,7 @@ const Contact = () => {
                 <div className="field">
                     <div data-netlify-recaptcha="true"></div>
                 </div>
-                <Button className="my-3" variant="dark" type="submit">
+                <Button className="my-3" variant="dark" type="submit" onClick={<Message variant="success">Votre mail à été envoyé. Merci d'avoir pris contact.</Message>}>
                     Envoyer
                 </Button>
             </Form>
