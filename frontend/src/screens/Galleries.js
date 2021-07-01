@@ -10,15 +10,15 @@ const Galleries = () => {
             <h2>Gallerie</h2>
             <Grid container className="img-grid py-5 mx-auto">
                 
-                <Card style={{ height: '460px', width: '320px'}}>
-                    <Card.Img className='mx-auto' variant="top" src="../../images/arbres.jpg" style={{ height: '250px', width: '300px'}} />
+                <Card className='my-3' style={{ height: '420px', width: '320px'}}>
+                    <Card.Img className='mx-auto' variant="top" src="../../images/arbres.jpg" style={{ height: '250px', width: '100%'}} />
                     <Card.Body>
                         <Card.Title>Paysages</Card.Title>
                         <Card.Text>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                         </Card.Text>
                         <Link to="/paysage">
-                            <Button variant="dark">Visiter</Button>
+                            <Button variant="dark" className='my-3'>Visiter</Button>
                         </Link>
                         
                     </Card.Body>
@@ -27,29 +27,29 @@ const Galleries = () => {
                 
 
 
-                <Card style={{ height: '460px', width: '320px'}}>
-                    <Card.Img className='mx-auto' variant="top" src="../../images/portrait.jpg" style={{ height: '250px', width: '300px'}}/>
+                <Card className='my-5' style={{ height: '420px', width: '320px'}}>
+                    <Card.Img className='mx-auto' variant="top" src="../../images/portrait.jpg" style={{ height: '250px', width: '100%'}}/>
                     <Card.Body>
                         <Card.Title>Portraits</Card.Title>
                         <Card.Text>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                         </Card.Text>
                         <Link to="/portrait">
-                            <Button variant="dark">Visiter</Button>
+                            <Button variant="dark" className='my-3'>Visiter</Button>
                         </Link>
                     </Card.Body>
                 </Card>
 
 
-                <Card style={{ height: '460px', width: '320px'}} >
-                    <Card.Img className='mx-auto' variant="top" src="../../images/rue.jpg" style={{ height: '250px', width: '300px'}}/>
+                <Card className='my-5' style={{ height: '420px', width: '320px'}} >
+                    <Card.Img className='mx-auto' variant="top" src="../../images/rue.jpg" style={{ height: '250px', width: '100%'}}/>
                     <Card.Body>
                         <Card.Title>Ville</Card.Title>
                         <Card.Text>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                         </Card.Text>
                         <Link to="/ville">
-                            <Button variant="dark">Visiter</Button>
+                            <Button variant="dark" className='my-3'>Visiter</Button>
                         </Link>
                     </Card.Body>
                 </Card>

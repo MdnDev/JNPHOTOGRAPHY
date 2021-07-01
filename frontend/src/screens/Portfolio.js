@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Grid } from '@material-ui/core';
+import { Container, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
@@ -25,20 +26,20 @@ const Portfolio = () => {
     
     
     return (
-        <>
-            <h1 className='my-5 mx-5'> PORTFOLIO</h1>
+        <Container>
+            <h1 className='my-5 '>PORTFOLIO</h1>
             {loading ? <Loader/> : error ? <Message variant="danger">{error}</Message> :
-            <Grid container spacing={1} >
+            <Grid container className='portfolio' spacing={1} >
             {photos.map((photo) => (
                 <Grid item key={photo._id}>
                     <Link to={`/photo/${photo._id}`}>
                         
-                   <img src={photo.image} alt={photo.name} style={{ height: '300px', width: '320px'}}/>
+                   <img src={photo.image} alt={photo.name} style={{ height: '230px', width: '250px'}}/>
                    </Link>
                 </Grid>
             ))}
             </Grid>}
-        </>
+        </Container>
     )
    
 }

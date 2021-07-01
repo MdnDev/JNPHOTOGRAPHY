@@ -27,11 +27,11 @@ const Impressions = () => {
                         </Link>
                     </div>
                     {loading ? <Loader/> : error ? <Message variant="danger">{error}</Message> :
-                <Grid container className='ml-5' spacing={1}>
+                <Grid container className='portfolio' spacing={1}>
                 {photos.map((photo) => (
                     <Grid item key={photo._id}>
                         <Link to={`/impression/${photo._id}`}>
-                            <img src={photo.image} alt={photo.name} style={{height: '300px', width: '320px'}}/>
+                            <img src={photo.image} alt={photo.name} style={{height: '230px', width: '270px'}}/>
                         </Link>
                     </Grid>
                 ))}

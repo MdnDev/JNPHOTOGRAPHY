@@ -45,14 +45,14 @@ const Boutique = () => {
            
            <Container className=" text-center py-5 mx-auto">
                 <h2>Boutique</h2>
-                <Grid container className="img-grid py-5 mx-auto">
+                <Grid container className="portfolio py-5">
                     
-                    <Card style={{ height: '460px', width: '320px'}}>
-                        <Card.Img className='mx-auto' variant="top" src="../../images/oiseau.jpg" style={{ height: '250px', width: '300px'}} />
+                    <Card >
+                        <Card.Img className='mx-auto' variant="top" src="../../images/oiseau.jpg" style={{ "max-height": '350px', "max-width": "400px"}} />
                         <Card.Body>
                             <Card.Title>Impressions</Card.Title>
                             <Card.Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Lorem ipsum  
                             </Card.Text>
                             <Link to="/impressions">
                                 <Button variant="dark">Visiter</Button>

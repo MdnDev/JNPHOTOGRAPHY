@@ -13,13 +13,13 @@ const PaysageScreen = () => {
                         <Link to ='/galleries' className='btn btn-dark my-4 ml-5'>RETOUR
                         </Link>
                     </div>
-            <Grid container className='ml-5' spacing={1}>
+            <Grid container className='portfolio' spacing={1}>
                 {paysages.map((paysage) => 
                     (
                      <Grid item key={paysage._id}>
                     <Link to={`/paysage/${paysage._id}`}>
                     <img src={paysage.image} alt={paysage.name}
-                    style={{ height: '300px', width: '320px'}} />
+                    style={{ height: '230px', width: '250px'}} />
                     </Link>
                     </Grid>
                     ))}

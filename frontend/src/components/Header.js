@@ -21,7 +21,7 @@ const Header = () => {
         
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <LinkContainer to="/">
-                    <Navbar.Brand >Jean-Noël Vireeye Photography
+                    <Navbar.Brand >Jean-Noël Vireeye
                     </Navbar.Brand>
                 </LinkContainer>
                

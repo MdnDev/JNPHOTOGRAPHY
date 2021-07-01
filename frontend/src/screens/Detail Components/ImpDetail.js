@@ -32,7 +32,7 @@ const ImpDetail = ({ history, match }) => {
             {loading ? <Loader/> : error ? <Message>{error}</Message> : (
             <Row>
                 <Col>
-                    <Card style={{ width: '500px' }}>
+                    <Card style={{ width: '270px' }}>
                         <Card.Img variant="top" src={photo.image} alt={photo.name} />
                     </Card>
                 </Col>
