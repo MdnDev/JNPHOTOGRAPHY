@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import { Grid } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
-import { listPhotoDetails } from '../../actions/photoActions';
+import { listExpoDetails } from '../../actions/expoActions';
 import Loader from '../../components/Loader';
 import Message from '../../components/Message';
 
@@ -14,11 +14,11 @@ import Message from '../../components/Message';
 const PicDetail = ({ match }) => {
     const dispatch = useDispatch();
 
-    const photoDetails = useSelector(state => state.photoDetails);
-    const { loading, error, photo } = photoDetails;
+    const expoDetails = useSelector(state => state.expoDetails);
+    const { loading, error, expo } = expoDetails;
 
     useEffect(() => {
-       dispatch(listPhotoDetails(match.params.id))
+       dispatch(listExpoDetails(match.params.id))
     }, [dispatch, match])
     
     return (
@@ -28,7 +28,7 @@ const PicDetail = ({ match }) => {
             {loading ? <Loader/> : error ? <Message>{error}</Message> : (
                 <Grid container >
                 <Grid item >
-                    <img src={photo.image} alt={photo.name}
+                    <img src={expo.image} alt={expo.name}
                     style={{ height: '100%', width: '100%'}} />
                 </Grid>
                 

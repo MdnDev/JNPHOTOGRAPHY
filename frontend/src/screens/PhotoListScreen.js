@@ -87,7 +87,7 @@ const PhotoListScreen = ({ history, match }) => {
                         <tr key={photo._id}>
                             <td>{photo._id}</td>
                             <td>{photo.name}</td>
-                            <td>${photo.price}</td>
+                            <td>{photo.price}€</td>
                             <td>
                                 {photo.category}
                             </td>

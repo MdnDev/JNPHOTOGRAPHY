@@ -21,6 +21,9 @@ const ImpDetail = ({ history, match }) => {
     const addToCartHandler = () => {
         history.push(`/cart/${match.params.id}?qty=${qty}`)
     }
+    const shopReturnHandler = () => {
+        history.push('/impressions')
+    };
 
     return (
         <Container>
@@ -32,7 +35,7 @@ const ImpDetail = ({ history, match }) => {
             {loading ? <Loader/> : error ? <Message>{error}</Message> : (
             <Row>
                 <Col>
-                    <Card style={{ width: '270px' }}>
+                    <Card>
                         <Card.Img variant="top" src={photo.image} alt={photo.name} />
                     </Card>
                 </Col>
@@ -40,9 +43,9 @@ const ImpDetail = ({ history, match }) => {
                 <Col>
                     <ListGroup variant="danger"  className="my-5">
                         <ListGroup.Item >{photo.name}</ListGroup.Item>
-                        <ListGroup.Item>Dimensions: non précisé</ListGroup.Item>
+                        <ListGroup.Item>Dimensions: {photo.dimension}</ListGroup.Item>
                         <ListGroup.Item>{photo.description}</ListGroup.Item>
-                        <ListGroup.Item>Price: {photo.price}</ListGroup.Item>
+                        <ListGroup.Item>Prix (EUR): {photo.price}€</ListGroup.Item>
                         <ListGroup.Item>{photo.countInStock > 0 ? 'En stock': 'Rupture de stock'}</ListGroup.Item>
                         {photo.countInStock > 0 && (
                         <ListGroup.Item>
@@ -59,10 +62,17 @@ const ImpDetail = ({ history, match }) => {
                         </ListGroup.Item>
                         )}
                     </ListGroup>
-
-                    <Button 
-                    onClick={addToCartHandler}
-                    className="btn btn-dark my-5">Ajouter au Panier</Button>
+                    <ListGroup>
+                    {photo.countInStock > 0 ? 
+                      <Button 
+                      onClick={addToCartHandler}
+                      className="btn btn-dark my-5">Ajouter au Panier</Button>
+                      : <Button 
+                      onClick={shopReturnHandler}
+                      className="btn btn-dark my-5">Rupture de Stock. Retour en Boutique ?</Button>} 
+                    </ListGroup>
+                                           
+                    
                 </Col>
                
                 

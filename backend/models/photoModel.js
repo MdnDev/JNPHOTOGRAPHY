@@ -23,10 +23,15 @@ const photoSchema = mongoose.Schema({
 
     category: {
         type: String,
-        required: true
+        required: true,
     },
 
     description: {
+        type: String,
+        required: true,
+    },
+
+    dimension: {
         type: String,
         required: true,
     },

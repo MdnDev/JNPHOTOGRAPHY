@@ -35,12 +35,6 @@ const Header = () => {
                         </LinkContainer>
                         
                         
-                        <LinkContainer to="/galleries">
-                            <Nav.Link>
-                            GALLERIES
-                            </Nav.Link>
-                        </LinkContainer>
-                        
                         
                         <LinkContainer to="/boutique">
                             <Nav.Link>
@@ -84,6 +78,9 @@ const Header = () => {
                             </LinkContainer>
                             <LinkContainer to='/admin/photolist'>
                                 <NavDropdown.Item>Photos</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to='/admin/expolist'>
+                                <NavDropdown.Item>Photos (Portfolio)</NavDropdown.Item>
                             </LinkContainer>
                             <LinkContainer to='/admin/orderlist'>
                                 <NavDropdown.Item>Commandes</NavDropdown.Item>

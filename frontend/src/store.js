@@ -5,6 +5,7 @@ import { photoListReducer, photoDetailReducer, photoDeleteReducer, photoCreateRe
 import { cartReducer } from './reducers/cartReducers';
 import { userDetailsReducer, userLoginReducer, userRegisterReducer, userUpdtateProfileReducer, userListReducer, userDeleteReducer, userUpdateReducer } from './reducers/userReducers';
 import { orderCreateReducer, orderDetailsReducer, orderPayReducer, orderListMyReducer, orderListReducer, orderDeliverReducer } from './reducers/orderReducers'
+import { expoCreateReducer, expoDetailReducer, expoDeleteReducer, expoListReducer, expoUpdateReducer } from './reducers/expoReducers'
 
 
 const reducer = combineReducers({
@@ -13,6 +14,11 @@ const reducer = combineReducers({
     photoDelete: photoDeleteReducer,
     photoCreate: photoCreateReducer,
     photoUpdate: photoUpdateReducer,
+    expoList: expoListReducer,
+    expoDetails: expoDetailReducer,
+    expoDelete: expoDeleteReducer,
+    expoCreate: expoCreateReducer,
+    expoUpdate: expoUpdateReducer,
     cart: cartReducer,
     userLogin: userLoginReducer,
     userRegister: userRegisterReducer,

@@ -119,8 +119,8 @@ const ProfileScreen = ({ location, history }) => {
                                 <th>ID</th>
                                 <th>DATE</th>
                                 <th>TOTAL</th>
-                                <th>PAID</th>
-                                <th>DELIVERED</th>
+                                <th>PAIEMENT</th>
+                                <th>LIVRAISON</th>
                                 <th></th>
                             </tr>
                         </thead>

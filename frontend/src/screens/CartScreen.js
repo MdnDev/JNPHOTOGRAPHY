@@ -1,6 +1,6 @@
 import React, { useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap';
+import { Row, Col, ListGroup, Image, Form, Button, Card, ListGroupItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Message from '../components/Message';
 import { addToCart, removeFromCart } from '../actions/cartActions';
@@ -35,6 +35,10 @@ const CartScreen = ({ match, location, history }) => {
 
     const checkoutHandler = () => {
         history.push('/login?redirect=shipping')
+    };
+
+    const shopReturnHandler = () => {
+        history.push('/impressions')
     };
 
     return (
@@ -90,12 +94,21 @@ const CartScreen = ({ match, location, history }) => {
                             <h5>Sous-Total ({cartItems.reduce((acc, item) => acc + item.qty, 0)}) produits</h5>
                             € {cartItems.reduce((acc, item) => acc + item.qty * item.price, 0).toFixed(2)}(EUR)
                         </ListGroup.Item>
-
+                        <ListGroupItem>
+                            <h5>Livraison (Colissimo): 9,90 euros</h5>
+                            <h5>Total: € {cartItems.reduce((acc, item) => acc + item.qty * item.price, 0 + 9.90).toFixed(2)}(EUR) </h5>
+                        </ListGroupItem>
                         <ListGroup.Item>
                             <Button type='button' className='btn-block' disabled={cartItems.length === 0} onClick={checkoutHandler}>
                                 Valider le Panier
                             </Button>
                         </ListGroup.Item>
+                        <ListGroup.Item>
+                            <Button type='button' className='btn-block' onClick={shopReturnHandler}>
+                                Retour à la boutique
+                            </Button>
+                        </ListGroup.Item>
+                        
                     </ListGroup>
                 </Card>
             </Col>

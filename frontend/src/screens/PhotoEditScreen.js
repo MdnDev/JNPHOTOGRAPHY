@@ -20,6 +20,7 @@ const PhotoEditScreen = ({ match, history }) => {
     const [category, setCategory] = useState('')
     const [countInStock, setCountInStock] = useState(0)
     const [description, setDescription] = useState('')
+    const [dimension, setDimension] = useState('')
     const [uploading, setUploading] = useState(false)
     
     const dispatch = useDispatch()
@@ -48,6 +49,7 @@ const PhotoEditScreen = ({ match, history }) => {
                     setCategory(photo.category)
                     setCountInStock(photo.countInStock)
                     setDescription(photo.description)
+                    setDimension(photo.dimension)
                 }
             }
         }, [dispatch, history, photoId, photo, successUpdate])
@@ -84,6 +86,7 @@ const PhotoEditScreen = ({ match, history }) => {
             category,
             image,
             description,
+            dimension,
             countInStock
         }))
         
@@ -129,7 +132,7 @@ const PhotoEditScreen = ({ match, history }) => {
                         </Form.Control>
                         <Form.File 
                             id='image-file' 
-                            label='Choose File'
+                            label='Choisissez le fichier'
                             custom
                             onChange={uploadFileHandler}>
                         </Form.File>
@@ -165,9 +168,19 @@ const PhotoEditScreen = ({ match, history }) => {
                         onChange={(e) => setDescription(e.target.value)}>
                         </Form.Control>
                 </Form.Group>
+
+                <Form.Group controlId='dimension'>
+                    <Form.Label>dimension</Form.Label>
+                        <Form.Control 
+                        type='text' 
+                        placeholder="Ajoutez une dimension"
+                        value={dimension}
+                        onChange={(e) => setDimension(e.target.value)}>
+                        </Form.Control>
+                </Form.Group>
                 
                 <Button type='submit' variant='primary'>
-                    Update
+                    Mettre à jour
                 </Button>
             </Form>
 

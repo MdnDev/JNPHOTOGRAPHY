@@ -7,6 +7,7 @@ import User from './models/userModel.js';
 import Photo from './models/photoModel.js';
 import Order from './models/orderModel.js';
 import connectDB from './config/db.js';
+import Expo from './models/expoModel.js';
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ const importData = async () => {
         await Order.deleteMany()
         await Photo.deleteMany()
         await User.deleteMany()
+        await Expo.deleteMany()
 
 
         const createdUser = await User.insertMany(users)
@@ -46,6 +48,7 @@ const destroyData = async () => {
         await Order.deleteMany()
         await Photo.deleteMany()
         await User.deleteMany()
+        await Expo.deleteMany()
         
         console.log('data destroyed!'.red.inverse)
         process.exit()

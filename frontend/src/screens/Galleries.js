@@ -15,7 +15,7 @@ const Galleries = () => {
                     <Card.Body>
                         <Card.Title>Paysages</Card.Title>
                         <Card.Text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        
                         </Card.Text>
                         <Link to="/paysage">
                             <Button variant="dark" className='my-3'>Visiter</Button>
@@ -32,7 +32,7 @@ const Galleries = () => {
                     <Card.Body>
                         <Card.Title>Portraits</Card.Title>
                         <Card.Text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        
                         </Card.Text>
                         <Link to="/portrait">
                             <Button variant="dark" className='my-3'>Visiter</Button>
@@ -46,7 +46,7 @@ const Galleries = () => {
                     <Card.Body>
                         <Card.Title>Ville</Card.Title>
                         <Card.Text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        
                         </Card.Text>
                         <Link to="/ville">
                             <Button variant="dark" className='my-3'>Visiter</Button>

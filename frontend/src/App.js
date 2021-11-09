@@ -33,7 +33,9 @@ import OrderScreen from './screens/OrderScreen';
 import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
 import PhotoListScreen from './screens/PhotoListScreen';
+import ExpoListScreen from './screens/ExpoListScreen';
 import PhotoEditScreen from './screens/PhotoEditScreen';
+import ExpoEditScreen from './screens/ExpoEditScreen';
 import OrderListScreen from './screens/OrderListScreen';
 
 
@@ -54,7 +56,7 @@ function App() {
           <Switch>
             
             <Route exact path="/" component={Portfolio}/>
-            <Route path="/photo/:id" component={PicDetail}/>
+            <Route path="/expo/:id" component={PicDetail}/>
            
             <Route path="/galleries" component={Galleries}/>
             <Route path="/paysage/:id" component={PayDetail}/>
@@ -90,8 +92,10 @@ function App() {
             <Route path="/admin/orderlist" component={OrderListScreen}/>
             <Route path="/admin/userlist" component={UserListScreen}/>
             <Route path="/admin/photolist" component={PhotoListScreen}/>
+            <Route path="/admin/expolist" component={ExpoListScreen}/>
             <Route path="/admin/user/:id/edit" component={UserEditScreen}/>
             <Route path="/admin/photo/:id/edit" component={PhotoEditScreen}/>
+            <Route path="/admin/expo/:id/edit" component={ExpoEditScreen}/>
             
             
             

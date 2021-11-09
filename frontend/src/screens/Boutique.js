@@ -50,9 +50,9 @@ const Boutique = () => {
                     <Card >
                         <Card.Img className='mx-auto' variant="top" src="../../images/oiseau.jpg" style={{ "max-height": '350px', "max-width": "400px"}} />
                         <Card.Body>
-                            <Card.Title>Impressions</Card.Title>
+                            <Card.Title>Tirages</Card.Title>
                             <Card.Text>
-                            Lorem ipsum  
+                            Ici, vous trouverez les clichés disponibles à la vente.  
                             </Card.Text>
                             <Link to="/impressions">
                                 <Button variant="dark">Visiter</Button>

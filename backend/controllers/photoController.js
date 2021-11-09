@@ -23,7 +23,7 @@ const getPhotoById = asyncHandler(async (req, res) => {
         res.json(photo)
     } else {
         res.status(404)
-        throw new Error('Product not Found')
+        throw new Error('Photo not Found')
     }
     
 })
@@ -42,7 +42,7 @@ const deletePhoto = asyncHandler(async (req, res) => {
         res.status(404)
         throw new Error('Product not Found')
     }
-    res.json(photo)
+    
 })
 
 // @description     Create a photo
@@ -57,8 +57,8 @@ const createPhoto = asyncHandler(async (req, res) => {
         image: '/image/sample.jpg',
         category: 'Sample Category',
         countInStock: 0,
-        numReviews: 0,
-        description: 'Sample description'
+        description: 'Sample description',
+        dimension: 'Sample dimension'
     })
 
     const createdPhoto = await photo.save()
@@ -74,7 +74,8 @@ const updatePhoto = asyncHandler(async (req, res) => {
     const {
         name, 
         price, 
-        description, 
+        description,
+        dimension, 
         image, 
         category, 
         countInStock
@@ -86,6 +87,7 @@ const updatePhoto = asyncHandler(async (req, res) => {
         photo.name = name
         photo.price = price
         photo.description = description
+        photo.dimension = dimension
         photo.image = image
         photo.category = category
         photo.countInStock = countInStock

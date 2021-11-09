@@ -54,7 +54,7 @@ const OrderScreen = ({ history, match }) => {
             document.body.appendChild(script)
         }
 
-            if (!order || successPay || successDeliver ) {
+            if (!order || successPay || successDeliver || order._id !== orderId ) {
             dispatch({ type: ORDER_PAY_RESET })
             dispatch({ type: ORDER_DELIVER_RESET })
             dispatch(getOrderDetails(orderId))
@@ -98,7 +98,7 @@ const OrderScreen = ({ history, match }) => {
                                 {order.shippingAddress.postalCode},{' '}
                                 {order.shippingAddress.country}
                             </p>
-                            {order.isDelivered ? <Message variant='success'>livré le {order.deliveredAt}</Message> : <Message variant='danger'>Non livré</Message>}
+                            {order.isDelivered ? <Message variant='success'>Livré le {order.deliveredAt}</Message> : <Message variant='danger'>Non livré</Message>}
                         </ListGroup.Item>
 
                         <ListGroup.Item>

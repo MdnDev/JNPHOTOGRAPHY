@@ -19,7 +19,7 @@ const Contact = () => {
 
             <section >
             <h5>Pour me contacter, veuillez remplir le formulaire ci-dessous:</h5>
-            <Form action="https://formsubmit.co/address@gmail.com" method="POST">
+            <Form action="https://formsubmit.co/wendellblackmore@gmail.com" method="POST">
                 <Row>
                     <Col>
                         <Form.Label className="my-2">Nom</Form.Label>

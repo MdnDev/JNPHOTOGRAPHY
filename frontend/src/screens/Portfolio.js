@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Grid } from '@material-ui/core';
-import { Container, Card } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
-import { listPhotos } from '../actions/photoActions';
+import { listExpos } from '../actions/expoActions';
 
 
 
@@ -17,11 +17,11 @@ import { listPhotos } from '../actions/photoActions';
 const Portfolio = () => {
     const dispatch = useDispatch();
 
-    const photoList = useSelector(state => state.photoList);
-    const { loading, error, photos } = photoList;
+    const expoList = useSelector(state => state.expoList);
+    const { loading, error, expos } = expoList;
 
     useEffect(() => {
-        dispatch(listPhotos())
+        dispatch(listExpos())
     }, [dispatch])
     
     
@@ -30,11 +30,11 @@ const Portfolio = () => {
             <h1 className='my-5 '>PORTFOLIO</h1>
             {loading ? <Loader/> : error ? <Message variant="danger">{error}</Message> :
             <Grid container className='portfolio' spacing={1} >
-            {photos.map((photo) => (
-                <Grid item key={photo._id}>
-                    <Link to={`/photo/${photo._id}`}>
+            {expos.map((expo) => (
+                <Grid item key={expo._id}>
+                    <Link to={`/expo/${expo._id}`}>
                         
-                   <img src={photo.image} alt={photo.name} style={{ height: '230px', width: '250px'}}/>
+                   <img src={expo.image} alt={expo.name} style={{ height: '230px', width: '250px'}}/>
                    </Link>
                 </Grid>
             ))}
