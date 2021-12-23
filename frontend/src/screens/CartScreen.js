@@ -95,7 +95,7 @@ const CartScreen = ({ match, location, history }) => {
                             € {cartItems.reduce((acc, item) => acc + item.qty * item.price, 0).toFixed(2)}(EUR)
                         </ListGroup.Item>
                         <ListGroupItem>
-                            <h5>Livraison (Colissimo): 9,90 euros</h5>
+                            <h5>La livraison est gérée par Colissimo (9.90 Euros)</h5>
                             <h5>Total: € {cartItems.reduce((acc, item) => acc + item.qty * item.price, 0 + 9.90).toFixed(2)}(EUR) </h5>
                         </ListGroupItem>
                         <ListGroup.Item>
