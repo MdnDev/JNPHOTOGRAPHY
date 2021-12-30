@@ -68,6 +68,8 @@ main{
 
 .contactArtist {
   display: flex;
+  font-style: italic;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 1200px){

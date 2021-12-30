@@ -11,15 +11,19 @@ const Contact = () => {
                 <div className="my-3 mx-5">
                 <h1>JEAN-NOËl VIREEYE</h1>
                 <h6>jean-noel.vireeye@pro.com</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <br/>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p className="my-3" style={{textAlign: 'justify' }}>
+                        Jean-Noel Vireeye est un écrivain, cinéaste et photographe Français.
+                        Il est le fils d'une enseignante Martiniquaise qui lui permet notemment de découvrir le cinéma.
+                        Lors de ses études en histoires et en cinéma à Paris, il découvre l'art de la photographie tout en aiguisant sa plume.
+                        C'est en alliant ce rapport à l'écriture et à l'image qu'il en vient à faire ses débuts dans le cinéma avec un film primé à travers le monde. 
+                        Les photos présentées sur ce site sont les premières saisies par ce jeune photographe.
+                </p>
                 </div>
              </section>
 
             <section >
             <h5>Pour me contacter, veuillez remplir le formulaire ci-dessous:</h5>
-            <Form action="https://formsubmit.co/wendellblackmore@gmail.com" method="POST">
+            <Form action="https://formsubmit.co/devlabs@outlook.fr" method="POST">
                 <Row>
                     <Col>
                         <Form.Label className="my-2">Nom</Form.Label>
