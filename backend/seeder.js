@@ -8,6 +8,7 @@ import Photo from './models/photoModel.js';
 import Order from './models/orderModel.js';
 import connectDB from './config/db.js';
 import Expo from './models/expoModel.js';
+import expos from './data/expos.js';
 
 dotenv.config();
 
@@ -31,6 +32,12 @@ const importData = async () => {
         })
 
         await Photo.insertMany(samplePhotos)
+
+        const sampleExpos = expos.map(expo => {
+            return { ...expo, user: adminUser }
+        })
+
+        await Expo.insertMany(sampleExpos)
         
         console.log('data imported!'.green.inverse)
         process.exit()

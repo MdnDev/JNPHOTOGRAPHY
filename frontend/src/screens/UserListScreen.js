@@ -34,7 +34,7 @@ const UserListScreen = ({ history }) => {
 
     return (
         <>
-            <h1>Utilisateurs</h1>
+            <h1 style={{ marginTop: '16px'}}>Utilisateurs</h1>
             {loading ? <Loader /> : error ? <Message variant='danger'>{error}</Message> : (
                 <Table striped bordered hover responsive className='table-sm'>
                     <thead>

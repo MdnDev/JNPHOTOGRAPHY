@@ -26,8 +26,11 @@ const OrderListScreen = ({ history }) => {
 
 
     return (
-        <>
-            <h1>Commandes</h1>
+        <div>
+            <h1 style={{ marginTop: '16px'}}>Commandes</h1>
+            <div style={{ marginTop: '32px'}}>
+                <Message variant={'info'} className="my-5 py-5">La Boutique n'est pas encore ouverte.</Message>
+                </div>
             {loading ? <Loader /> : error ? <Message variant='danger'>{error}</Message> : (
                 <Table striped bordered hover responsive className='table-sm'>
                     <thead>
@@ -40,6 +43,7 @@ const OrderListScreen = ({ history }) => {
                         <th>Livraison</th>
                     </tr>
                 </thead>
+               
                 <tbody>
                     {orders.map((order) => (
                         <tr key={order._id}>
@@ -80,7 +84,7 @@ const OrderListScreen = ({ history }) => {
                 </tbody>
                 </Table>
              )}
-        </>
+        </div>
     )
 }
 

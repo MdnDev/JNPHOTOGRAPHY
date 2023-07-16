@@ -33,7 +33,7 @@ const photoSchema = mongoose.Schema({
 
     dimension: {
         type: String,
-        required: true,
+        required: false,
     },
 
     price: {

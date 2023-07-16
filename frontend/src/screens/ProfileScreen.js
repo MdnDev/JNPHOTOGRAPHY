@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Form, Button, Row, Col, Table } from 'react-bootstrap'
-import { LinkContainer } from 'react-router-bootstrap'
+// import { LinkContainer } from 'react-router-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import { getUserDetails, updateUserProfile } from '../actions/userActions'
-import { listMyOrders } from '../actions/orderActions'
+// import { listMyOrders } from '../actions/orderActions'
 import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstant'
 
 
@@ -28,8 +28,7 @@ const ProfileScreen = ({ location, history }) => {
     const { success } = userUpdateProfile
 
     const orderListMy = useSelector((state) => state.orderListMy)
-    const { loading:loadingOrders ,error:errorOrders, orders } = orderListMy
-
+    // const { loading:loadingOrders ,error:errorOrders, orders } = orderListMy
     
 
     useEffect(() => {
@@ -39,13 +38,13 @@ const ProfileScreen = ({ location, history }) => {
             if (!user || !user.name || success) {
                 dispatch({ type: USER_UPDATE_PROFILE_RESET })
                 dispatch(getUserDetails('profile'))
-                dispatch(listMyOrders())
+                // dispatch(listMyOrders())
             } else {
                 setName(user.name)
                 setEmail(user.email)
             }
         }
-    }, [dispatch, history, userInfo, user, success])
+    }, [dispatch, history, userInfo, user])
 
     
     
@@ -113,7 +112,9 @@ const ProfileScreen = ({ location, history }) => {
             </Col>
 
             <Col md={9}>
-                <h2 className='my-5'>Mes commandes</h2>
+                <div style={{ marginTop: '56px'}}></div>
+                <Message variant={'info'} className="my-5 py-5">La Boutique n'est pas encore ouverte.</Message>
+                {/* <h2 className='my-5'>Mes commandes</h2>
                 {loadingOrders ? <Loader /> : errorOrders ? <Message variant='danger'>{errorOrders}</Message> : (
                     <Table striped bordered hover responsive className='table-sm'>
                         <thead>
@@ -153,7 +154,7 @@ const ProfileScreen = ({ location, history }) => {
                             ))}
                         </tbody>
                     </Table>
-                )}
+                )} */}
             </Col>
         </Row>
     )

@@ -24,10 +24,10 @@ const Portfolio = () => {
         dispatch(listExpos())
     }, [dispatch])
     
-    
+    console.log('bumbum',expos, expoList)
     return (
         <Container>
-            <h1 className='my-5 '>PORTFOLIO</h1>
+            <h1 className='my-5 ' style={{ textAlign: 'center'}}>MON PORTFOLIO</h1>
             {loading ? <Loader/> : error ? <Message variant="danger">{error}</Message> :
             <Grid container className='portfolio' spacing={1} >
             {expos.map((expo) => (

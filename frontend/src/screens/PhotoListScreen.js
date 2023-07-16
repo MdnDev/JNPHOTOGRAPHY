@@ -59,7 +59,7 @@ const PhotoListScreen = ({ history, match }) => {
         <>
             <Row>
                 <Col>
-                <h1 className='my-5'>Photos</h1>
+                <h1 className='my-5'>Photos à Tirer (Boutique)</h1>
                 </Col>
                 <Col className='text-right'>
                     <Button className='my-3' onClick={createPhotoHandler}>
