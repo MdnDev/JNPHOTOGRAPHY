@@ -9,7 +9,7 @@ const Contact = () => {
         <Image className="profilePic" src="../../images/JNTEST2.png" />
         <div className="my-3 mx-5">
           <h1>JEAN-NOËl VIREEYE</h1>
-          <h6>jean-noel.vireeye@pro.com</h6>
+          <h6>vireeye.jean-noel@outlook.fr</h6>
           <p className="my-3" style={{ textAlign: "justify" }}>
             Jean-Noel Vireeye est un écrivain, cinéaste et photographe Français.
             Il est le fils d'une enseignante Martiniquaise qui lui permet

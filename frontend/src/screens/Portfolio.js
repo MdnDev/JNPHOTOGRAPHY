@@ -24,7 +24,6 @@ const Portfolio = () => {
         dispatch(listExpos())
     }, [dispatch])
     
-    console.log('bumbum',expos, expoList)
     return (
         <Container>
             <h1 className='my-5 ' style={{ textAlign: 'center'}}>MON PORTFOLIO</h1>
